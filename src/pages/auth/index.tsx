@@ -31,7 +31,7 @@ const AuthPage = () => {
       </Box>
 
       <form className="flex flex-col gap-10">
-        <PhoneInput label="شماره همراه" fullWidth />
+        <PhoneInput placeholder="شماره همراه" fullWidth />
         <CButton fullWidth>ادامه</CButton>
       </form>
     </div>
