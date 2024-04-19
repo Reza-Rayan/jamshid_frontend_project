@@ -1,3 +1,118 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* Import Fonts */
+@font-face {
+    font-family: 'IranYekan';
+    src: url("/public/fonts/iranYekan/iranyekanwebblackfanum.ttf");
+    src: url("/public/fonts/iranYekan/iranyekanwebblackfanum.woff");
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'IranYekan';
+    src: url("/public/fonts/iranYekan/iranyekanwebextraboldfanum.ttf");
+    src: url("/public/fonts/iranYekan/iranyekanwebextraboldfanum.woff");
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'IranYekan';
+    src: url("/public/fonts/iranYekan/iranyekanwebboldfanum.ttf");
+    src: url("/public/fonts/iranYekan/iranyekanwebboldfanum.woff");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'IranYekan';
+    src: url("/public/fonts/iranYekan/iranyekanwebmediumfanum.ttf");
+    src: url("/public/fonts/iranYekan/iranyekanwebmediumfanum.woff");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'IranYekan';
+    src: url("/public/fonts/iranYekan/iranyekanwebregularfanum.ttf");
+    src: url("/public/fonts/iranYekan/iranyekanwebregularfanum.woff");
+    font-weight: 500;
+}
+
+
+@font-face {
+    font-family: "Anjoman";
+    src: url("/public/fonts/anjoman/Anjoman-FaNum-Bold.woff");
+    src: url("/public/fonts/anjoman/Anjoman-FaNum-Bold.woff2");
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: "Anjoman";
+    src: url("/public/fonts/anjoman/Anjoman-FaNum-Regular.woff");
+    src: url("/public/fonts/anjoman/Anjoman-FaNum-Regular.woff2");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Anjoman";
+    src: url("/public/fonts/anjoman/Anjoman-FaNum-Light.woff2");
+    src: url("/public/fonts/anjoman/anjoman.woff");
+    font-weight: 400;
+}
+
+/* Import Fonts */
+
+/* General Styles */
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    direction: rtl;
+}
+
+html {
+    scroll-behavior: smooth;
+    direction: rtl;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "IranYekan" !important;
+}
+
+div,
+p,
+section {
+    font-family: "Anjoman" !important;
+    font-weight: 400 !important;
+}
+
+h1 {
+    font-weight: 900 !important;
+}
+
+h2 {
+    font-weight: 800 !important;
+}
+
+h3 {
+    font-weight: 700 !important;
+}
+
+h4 {
+    font-weight: 600 !important;
+}
+
+h5 {
+    font-weight: 600 !important;
+}
+
+/* General Styles */
