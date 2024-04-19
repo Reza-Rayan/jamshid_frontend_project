@@ -9,8 +9,10 @@ const App = () => {
       <p className="text-[14px] text-white">
         این پروژه یک اپلیکیشن سرگرمی است که با بازی مافیا شروع به کار خواهد کرد
       </p>
-      <PhoneInput label="شماره همراه" fullWidth />
-      <CButton fullWidth>ادامه</CButton>
+      <form className="px-4 gap-10 flex flex-col">
+        <PhoneInput label="شماره همراه" fullWidth />
+        <CButton fullWidth>ادامه</CButton>
+      </form>
     </div>
   );
 };
