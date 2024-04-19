@@ -90,7 +90,8 @@ h5 {
 
 div,
 p,
-section {
+section,
+button {
     font-family: "Anjoman" !important;
     font-weight: 400 !important;
 }
@@ -120,6 +121,10 @@ h5 {
 /* Custom Styles */
 body {
     background-color: #0C0C3F;
+}
+
+.btn-style {
+    background-image: linear-gradient(30deg, #64C9F3, #2475FF);
 }
 
 /* Custom Styles */

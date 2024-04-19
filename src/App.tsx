@@ -1,5 +1,6 @@
 // Custom Components
 import PhoneInput from "./templates/PhoneInput";
+import CButton from "./templates/CButton";
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
         این پروژه یک اپلیکیشن سرگرمی است که با بازی مافیا شروع به کار خواهد کرد
       </p>
       <PhoneInput label="شماره همراه" fullWidth />
+      <CButton fullWidth>ادامه</CButton>
     </div>
   );
 };
