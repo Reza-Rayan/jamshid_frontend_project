@@ -10,15 +10,11 @@ import { CiShop } from "react-icons/ci";
 import { FaUser } from "react-icons/fa";
 
 const CMenu = () => {
-  const [value, setValue] = React.useState("recents");
 
-  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
-    setValue(newValue);
-  };
 
   return (
     <div className="relative ">
-      <div className="fixed w-full bottom-0 flex gap-4 custom-menu-sticky py-3">
+      <div className="fixed justify-center  w-full bottom-0 z-20 flex gap-5 custom-menu-sticky py-3">
         <Button>
           <RiHome5Fill fontSize={20} color="#A6A6CB" />
         </Button>
