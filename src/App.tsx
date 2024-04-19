@@ -1,19 +1,14 @@
-import { TextField } from "@mui/material";
+// Custom Components
+import PhoneInput from "./templates/PhoneInput";
 
 const App = () => {
   return (
     <div className="h-screen flex flex-col justify-center items-center gap-4">
-      <h1 className="text-4xl font-extrabold">پروژه جمشید</h1>
-      <p className="text-[14px]">
+      <h1 className="text-4xl font-extrabold text-white">پروژه جمشید</h1>
+      <p className="text-[14px] text-white">
         این پروژه یک اپلیکیشن سرگرمی است که با بازی مافیا شروع به کار خواهد کرد
       </p>
-      <TextField
-        dir="rtl"
-        placeholder="تست راست چین بودن MUI"
-        id="outlined-basic"
-        label="تست راست چین بودن MUI"
-        variant="outlined"
-      />
+      <PhoneInput label="شماره همراه" fullWidth />
     </div>
   );
 };
