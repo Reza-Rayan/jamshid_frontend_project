@@ -1,10 +1,12 @@
-import { Typography } from "@mui/material";
 import Layout from "../layout/Layout";
+
+// Custom Components
+import SuperEvent from "../components/SuperEvent";
 
 const Home = () => {
   return (
     <Layout>
-      <Typography component={"h1"} fontSize={28}></Typography>
+      <SuperEvent />
     </Layout>
   );
 };
