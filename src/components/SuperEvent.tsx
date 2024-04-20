@@ -39,8 +39,13 @@ const SuperEvent = () => {
         <div className="absolute bottom-0  z-40 flex justify-between px-5 py-2 w-full">
           <div className="flex flex-col gap-1">
             <h4 className="text-lg font-extrabold">ایونت مافیا (شب کلاسیک)</h4>
-            <span className="text-[10px] font-medium text-[#A6A6CB]">
-              ساعت ۲۳:۲۰ ـ ۱۸ فروردین
+            <span className="text-[10px] font-medium text-[#A6A6CB] flex gap-1 ">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 6C11 8.76 8.76 11 6 11C3.24 11 1 8.76 1 6C1 3.24 3.24 1 6 1C8.76 1 11 3.24 11 6Z" stroke="#A6A6CB" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.85494 7.59L6.30494 6.665C6.03494 6.505 5.81494 6.12 5.81494 5.805V3.755" stroke="#A6A6CB" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+              <span>ساعت ۲۳:۲۰ ـ ۱۸ فروردین</span>
             </span>
           </div>
           <div className="flex flex-col gap-1 ">
