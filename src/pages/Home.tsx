@@ -4,6 +4,7 @@ import Layout from "../layout/Layout";
 import SuperEvent from "../components/SuperEvent";
 import Title from "../templates/Title";
 import { Box } from "@mui/material";
+import CTabs from "../templates/Tabs";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
         href="#"
       />
     </Box>
+    <CTabs title="بازی ها: "/>
     </Layout>
   );
 };
