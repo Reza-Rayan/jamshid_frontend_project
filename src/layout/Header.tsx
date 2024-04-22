@@ -34,7 +34,7 @@ const Header = () => {
         </Box>
       </Link>
       <div className="flex justify-center items-center gap-4 border border-[#4C4C72] py-2 px-3 rounded-lg">
-        <Link to="/explore">
+        <Link to="/search">
           <LuSearch fontSize={22} />
         </Link>
         <Link to="/notifications">

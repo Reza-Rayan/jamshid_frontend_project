@@ -168,16 +168,16 @@ const CMenu = () => {
               <path
                 d="M10.6334 9.05829C10.55 9.04996 10.45 9.04996 10.3584 9.05829C8.37505 8.99163 6.80005 7.36663 6.80005 5.36663C6.80005 3.32496 8.45005 1.66663 10.5 1.66663C12.5417 1.66663 14.2 3.32496 14.2 5.36663C14.1917 7.36663 12.6167 8.99163 10.6334 9.05829Z"
                 stroke="#A6A6CB"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
                 d="M6.46672 12.1334C4.45006 13.4834 4.45006 15.6834 6.46672 17.025C8.75839 18.5584 12.5167 18.5584 14.8084 17.025C16.8251 15.675 16.8251 13.475 14.8084 12.1334C12.5251 10.6084 8.76672 10.6084 6.46672 12.1334Z"
                 stroke="#A6A6CB"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </Icon>

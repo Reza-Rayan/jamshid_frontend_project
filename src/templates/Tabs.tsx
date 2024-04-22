@@ -1,5 +1,5 @@
-import React from 'react';
-import { Box, Tabs, Tab, useTheme } from '@mui/material';
+import React from "react";
+import { Box, Tabs, Tab, useTheme } from "@mui/material";
 
 interface TabsProps {
   title: string;
@@ -14,10 +14,16 @@ const CTabs = ({ title }: TabsProps) => {
   };
 
   return (
-    <Box sx={{ display: "flex", alignItems: "center",gap:"10px",
-        width:"100%",
-    position: "relative" }}>
-      <h2 className='text-[12px]'>{title}</h2>
+    <Box
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        gap: "10px",
+        width: "100%",
+        position: "relative",
+      }}
+    >
+      <h2 className="text-[12px]">{title}</h2>
       <Tabs
         value={value}
         onChange={handleChange}
@@ -26,23 +32,23 @@ const CTabs = ({ title }: TabsProps) => {
         aria-label="games"
         sx={{
           "& .MuiTabs-scroller": {
-            overflow: "unset"
+            overflow: "unset",
           },
           "& .MuiTabs-indicator": {
-            display: "none" // Hide the indicator
+            display: "none", // Hide the indicator
           },
           "& .MuiTab-root": {
             minWidth: "30px",
             fontSize: "12px",
-            borderRadius:"10px",
-            minHeight:"0px",
-            margin:"auto",
+            borderRadius: "10px",
+            minHeight: "0px",
+            margin: "auto",
             color: "#A6A6CB",
             "&.Mui-selected": {
               background: `linear-gradient(to bottom, ${theme.palette.primary.main}, ${theme.palette.primary.light})`,
               color: theme.palette.common.white,
-            }
-          }
+            },
+          },
         }}
       >
         <Tab label="همه" />
