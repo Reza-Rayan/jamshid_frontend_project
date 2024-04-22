@@ -1,9 +1,22 @@
 import { Box, Card, Stack, Typography } from "@mui/material";
 
-import avatarImg from "../assets/images/avatar.jpg";
-import MafiaBannerImg from "../assets/images/mafia-banner.png";
+interface GameCardProps {
+  title: string;
+  location: string;
+  conductor: string;
+  date: string;
+  image?: any;
+  avatar?: any;
+}
 
-const GameCard = () => {
+const GameCard = ({
+  title,
+  location,
+  conductor,
+  date,
+  image,
+  avatar,
+}: GameCardProps) => {
   return (
     <Card
       sx={{ backgroundColor: "#24245270", color: "#ffffff" }}
@@ -12,7 +25,7 @@ const GameCard = () => {
       <Box>
         <div className="flex gap-1 p-2 mb-2 bg-[#ffffff07]">
           <img
-            src={avatarImg}
+            src={avatar}
             alt="گرداننده"
             className="rounded-full"
             width={21}
@@ -20,17 +33,12 @@ const GameCard = () => {
           />
           <div className="text-[12px] text-[#A6A6CB]">
             گرداننده:{" "}
-            <span className="text-white font-medium">علیرضا رودی</span>
+            <span className="text-white font-medium">{conductor} </span>
           </div>
         </div>
 
         <div className="overflow-hidden rounded-md">
-          <img
-            src={MafiaBannerImg}
-            alt="event banner"
-            width={170}
-            height={136}
-          />
+          <img src={`${image}`} alt="event banner" width={170} height={136} />
         </div>
       </Box>
 
@@ -57,7 +65,7 @@ const GameCard = () => {
             />
           </svg>
           <Typography fontSize={10} className="text-[#A6A6CB]">
-            ساعت ۲۳:۲۰ ـ ۱۸ فروردین
+            {date}
           </Typography>
         </div>
         <Stack className="my-4">
@@ -67,7 +75,7 @@ const GameCard = () => {
             fontWeight={800}
             style={{ margin: "10ox " }}
           >
-            بازی مافیا (سناریو کشیش)
+            {title}
           </Typography>
         </Stack>
         <div className="flex items-center gap-1 mt-2 text-[#A6A6CB] border-b  border-[#A6A6CB15] pb-2 ">
@@ -87,7 +95,7 @@ const GameCard = () => {
               stroke="#A6A6CB"
             />
           </svg>
-          <Typography fontSize={10}>کافه دون کلاب</Typography>
+          <Typography fontSize={10}>{location} </Typography>
         </div>
         <div className="flex items-center gap-1 mt-2 text-[#A6A6CB]">
           <svg

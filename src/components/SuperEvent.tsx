@@ -1,7 +1,7 @@
 // Import Image
 import { Link } from "react-router-dom";
-import AvatarImg from "../assets/images/avatar.jpg";
-import SuperEventImg from "../assets/images/super-event.jpg";
+import AvatarImg from "../../public/images/avatar.jpg";
+import SuperEventImg from "../../public/images/blog-image.jpg";
 
 const SuperEvent = () => {
   return (

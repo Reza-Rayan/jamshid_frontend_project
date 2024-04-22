@@ -40,7 +40,7 @@ const PhoneInput = ({
             <ReactFlagsSelect
               selected="IR"
               onSelect={(countryCode: string) => {
-                // Handle country selection if needed
+                console.log(countryCode);
               }}
               showSelectedLabel={false}
               className="custom-flag"

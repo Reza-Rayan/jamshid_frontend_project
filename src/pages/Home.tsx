@@ -9,6 +9,9 @@ import GameCard from "../templates/GameCard";
 import AdBannerImg from "../assets/banner-home.jpg";
 import BLogCard from "../templates/BLogCard";
 
+// Fake Data
+import { mafia } from "../data/mafia.json";
+
 const Home = () => {
   return (
     <Layout>
@@ -22,8 +25,17 @@ const Home = () => {
       </Box>
       <CTabs title="بازی ها: " />
       <Box className="grid grid-cols-2 gap-4">
-        <GameCard />
-        <GameCard />
+        {mafia.map((item) => (
+          <GameCard
+            key={item.id}
+            conductor={item.conductor}
+            date={item.date}
+            location={item.location}
+            title={item.title}
+            image={item.image}
+            avatar={item.avatar}
+          />
+        ))}
       </Box>
       <Stack sx={{ margin: "32px auto" }}>
         <img src={AdBannerImg} alt="جم‌شید" className="rounded-[20px]" />

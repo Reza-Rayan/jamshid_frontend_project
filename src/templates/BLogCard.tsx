@@ -1,5 +1,5 @@
 import { Box, Card, Typography } from "@mui/material";
-import BlogImage from "../assets/images/blog-image.jpg";
+import BlogImage from "../../public/images/blog-image.jpg";
 
 const BLogCard = () => {
   return (

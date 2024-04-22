@@ -1,0 +1,22 @@
+{
+  "mafia": [
+    {
+      "id": 1,
+      "title": "بازی مافیا (سناریو کشیش)",
+      "location": "کافه دون کلاب",
+      "conductor": "علیرضا رودی",
+      "date": "ساعت ۲۳:۲۰ ـ ۱۸ فروردین",
+      "image": "./images/mafia-banner.png",
+      "avatar": "./images/avatar.jpg"
+    },
+    {
+      "id": 2,
+      "title": "بازی مافیا (سناریو کشیش)",
+      "location": "کافه دون کلاب",
+      "conductor": "علیرضا رودی",
+      "date": "ساعت ۲۳:۲۰ ـ ۱۸ فروردین",
+      "image": "./images/mafia-banner.png",
+      "avatar": "./images/avatar.jpg"
+    }
+  ]
+}

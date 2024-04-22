@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"; // Assuming you are using react-router-dom for routing
-import { Button, Input, InputAdornment, OutlinedInput } from "@mui/material";
+import { Button, InputAdornment, OutlinedInput } from "@mui/material";
 import { LuSearch } from "react-icons/lu";
 
 const SearchBox = () => {
