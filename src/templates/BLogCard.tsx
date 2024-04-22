@@ -1,19 +1,20 @@
 import { Box, Card, Typography } from "@mui/material";
-import BlogImage from "../../public/images/blog-image.jpg";
 
-const BLogCard = () => {
+interface BLogCardProps {
+  title: string;
+  comments: number;
+  date: string;
+  image?: any;
+  author: string;
+}
+
+const BLogCard = ({ title, comments, date, image, author }: BLogCardProps) => {
   return (
     <Card
       sx={{ backgroundColor: "#24245270", color: "#ffffff" }}
       className="p-2"
     >
-      <img
-        src={BlogImage}
-        alt=""
-        className="rounded-lg"
-        width={215}
-        height={110}
-      />
+      <img src={image} alt="" className="rounded-lg" width={215} height={110} />
       <Box className="border-b border-[#A6A6CB15] pb-2">
         <div className="text-[#A6A6CB] flex gap-1 my-2">
           <svg
@@ -71,11 +72,11 @@ const BLogCard = () => {
             />
           </svg>
           <Typography fontSize={10} fontWeight={500}>
-            ۱۲ بهمن ۱۴۰۲
+            {date}
           </Typography>
         </div>
         <Typography fontSize={12} fontWeight={800} color={"white"}>
-          بیشتر با سناریو کشیش آشنا شوید. سناریوو جذاب و پیچیده
+          {title}
         </Typography>
       </Box>
       <div className="flex justify-between items-center">
@@ -102,7 +103,7 @@ const BLogCard = () => {
             />
           </svg>
 
-          <Typography fontSize={10}>+۲۱ نفر در بازی حضور دارند</Typography>
+          <Typography fontSize={10}>{author}</Typography>
         </div>
         <div
           className="flex items-center justify-center gap-1 p-1 rounded-[3px]
@@ -142,7 +143,7 @@ const BLogCard = () => {
             />
           </svg>
           <Typography fontSize={10} fontWeight={500}>
-            3
+            {comments}
           </Typography>
         </div>
       </div>

@@ -11,6 +11,7 @@ import BLogCard from "../templates/BLogCard";
 
 // Fake Data
 import { mafia } from "../data/mafia.json";
+import { blog } from "../data/blog.json";
 
 const Home = () => {
   return (
@@ -44,8 +45,16 @@ const Home = () => {
       <Box className="my-8">
         <Title title="جدیدترین مقالات" href="#" />
         <div className="grid grid-cols-2 gap-4 mt-5">
-          <BLogCard />
-          <BLogCard />
+          {blog.map((item) => (
+            <BLogCard
+              key={item.id}
+              title={item.title}
+              author={item.author}
+              comments={item.comments}
+              date={item.date}
+              image={item.image}
+            />
+          ))}
         </div>
       </Box>
     </Layout>
