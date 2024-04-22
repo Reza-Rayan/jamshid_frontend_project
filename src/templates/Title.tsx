@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 interface TitleProps{
     title: string;
-    description: string;
+    description?: string;
     href?: string;
 }
 const Title = ({title,description,href}:TitleProps) => {
@@ -15,7 +15,7 @@ const Title = ({title,description,href}:TitleProps) => {
             <Typography variant='body1' fontSize={8} fontWeight={400}>{description}</Typography>
         </div>
         <div>
-            <span className=' h-[1px] bg-[#A6A6CB20] flex w-[115px] items-center'></span>
+            <span className=' h-[1px] bg-[#A6A6CB20] flex w-[140px] items-center'></span>
         </div>
         <Link to={`${href}`} className='flex gap-2 items-center text-[#A6A6CB]'>
     <span className='text-[10px]'>
