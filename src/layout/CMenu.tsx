@@ -10,7 +10,7 @@ const CMenu = () => {
   };
 
   return (
-    <div className="relative z-30">
+    <div className="relative z-50">
       <div className="fixed w-full bottom-0 flex gap-4 custom-menu-sticky py-3">
         <Button
           className="relative h-full"
