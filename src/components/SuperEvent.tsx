@@ -8,8 +8,8 @@ const SuperEvent = () => {
     <Link to={"/"} className="relative overflow-hidden w-full ">
       <div className="super-event-bg h-full w-full bg-black opacity-60"></div>
       <div className="relative">
-        <img src={SuperEventImg} className="rounded-lg h-[168px] w-full z-0" />
-        <div className=" p-4 flex justify-between absolute top-0 left-0 z-40 w-full">
+        <img src={SuperEventImg} className="rounded-lg h-[168px] w-full " />
+        <div className=" p-4 flex justify-between absolute top-0 left-0  w-full">
           <div className="text-[10px] text-[#A6A6CB] font-medium h-7">
             <div className="bg-[#0C0C3F] text-white h-7 p-1 flex items-center gap-1 rounded-md">
               <img
@@ -37,7 +37,7 @@ const SuperEvent = () => {
             <span className="w-[10px]">ویژه</span>
           </div>
         </div>
-        <div className="absolute bottom-0  z-40 flex justify-between px-5 py-2 w-full">
+        <div className="absolute bottom-0   flex justify-between px-5 py-2 w-full">
           <div className="flex flex-col gap-1">
             <h4 className="text-lg font-extrabold">ایونت مافیا (شب کلاسیک)</h4>
             <span className="text-[10px] font-medium text-[#A6A6CB] flex items-center gap-1 mt-2">

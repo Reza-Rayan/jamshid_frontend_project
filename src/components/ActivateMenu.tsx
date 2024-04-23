@@ -14,7 +14,7 @@ const ActivateMenu = ({ url }: ActivateMenuProps) => {
     <>
       {isActive(`${url}`) && (
         <div className="bg-[#0C0C3F] absolute top-[-28px] right-[30%] w-6 h-6 flex items-center justify-center rounded-2xl">
-          <span className=" w-2 h-2 rounded-full bg-[#64c9f3] block z-10"></span>
+          <span className=" w-2 h-2 rounded-full bg-[#64c9f3] block z-30"></span>
         </div>
       )}
     </>
