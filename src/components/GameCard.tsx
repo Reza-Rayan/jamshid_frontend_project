@@ -5,8 +5,8 @@ interface GameCardProps {
   location: string;
   conductor: string;
   date: string;
-  image?: any;
-  avatar?: any;
+  image?: string;
+  avatar?: string;
 }
 
 const GameCard = ({

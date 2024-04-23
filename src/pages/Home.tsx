@@ -2,12 +2,12 @@ import Layout from "../layout/Layout";
 
 // Custom Components
 import SuperEvent from "../components/SuperEvent";
-import Title from "../templates/Title";
+import Title from "../components/Title";
 import { Box, Stack } from "@mui/material";
 import CTabs from "../templates/Tabs";
-import GameCard from "../templates/GameCard";
+import GameCard from "../components/GameCard";
 import AdBannerImg from "../assets/banner-home.jpg";
-import BLogCard from "../templates/BLogCard";
+import BLogCard from "../components/BLogCard";
 
 // Fake Data
 import { mafia } from "../data/mafia.json";

@@ -2,8 +2,8 @@ import { Box, Typography } from "@mui/material";
 
 // Custom Components
 import Veil from "../../components/Veil";
-import PhoneInput from "../../templates/PhoneInput";
-import CButton from "../../templates/CButton";
+import PhoneInput from "../../components/PhoneInput";
+import CButton from "../../components/CButton";
 
 const AuthPage = () => {
   return (

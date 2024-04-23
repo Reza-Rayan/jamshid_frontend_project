@@ -4,7 +4,7 @@ interface BLogCardProps {
   title: string;
   comments: number;
   date: string;
-  image?: any;
+  image?: string;
   author: string;
 }
 
