@@ -15,9 +15,7 @@ const CCarousel = ({ slides }: CCarouselProps) => {
   return (
     <Swiper
       spaceBetween={10}
-      slidesPerView={1.5}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
+      slidesPerView={1.7}
     >
       {slides.map((slide, index) => (
         <SwiperSlide key={index}>{slide.content}</SwiperSlide>
