@@ -2,14 +2,13 @@ import { Link } from "react-router-dom"; // Assuming you are using react-router-
 import { Button, InputAdornment, OutlinedInput } from "@mui/material";
 import { LuSearch } from "react-icons/lu";
 
-const SearchBox = () => {
-  const handleClick = () => {
-    // Add your onClick functionality here
-    console.log("Button clicked");
-  };
+interface SearchBoxProps {
+  searchHandle: any;
+}
 
+const SearchBox = ({ searchHandle }: SearchBoxProps) => {
   return (
-    <div className="flex items-center">
+    <div className="flex items-center pl-8">
       <Link to="/">
         <Button component="span">
           <svg
@@ -44,6 +43,7 @@ const SearchBox = () => {
         </Button>
       </Link>
       <OutlinedInput
+        fullWidth
         sx={{
           "& fieldset": {
             borderColor: "#4C4C72",
@@ -58,7 +58,7 @@ const SearchBox = () => {
             <LuSearch className="text-2xl text-[#4C4C72]" />
           </InputAdornment>
         }
-        onClick={handleClick}
+        onChange={searchHandle}
       />
     </div>
   );
