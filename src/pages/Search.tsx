@@ -1,10 +1,10 @@
 //Custom Components
+import { Icon, Typography } from "@mui/material";
 import { useState } from "react";
-import { Typography, Icon, Box } from "@mui/material";
+import BLogCard from "../components/BLogCard";
+import GameCard from "../components/GameCard";
 import SearchBox from "../components/SearchBox";
 import CCarousel from "../templates/CCarousel";
-import GameCard from "../components/GameCard";
-import BLogCard from "../components/BLogCard";
 // Fake Data
 import { blog } from "../data/blog.json";
 import { mafia } from "../data/mafia.json";
