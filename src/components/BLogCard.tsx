@@ -14,7 +14,7 @@ const BLogCard = ({ title, comments, date, image, author }: BLogCardProps) => {
       sx={{ backgroundColor: "#24245270", color: "#ffffff" }}
       className="p-2"
     >
-      <img src={image} alt="" className="rounded-lg" width={215} height={110} />
+      <img src={image} alt="" className="rounded-lg w-full" />
       <Box className="border-b border-[#A6A6CB15] pb-2">
         <div className="text-[#A6A6CB] flex gap-1 my-2">
           <svg

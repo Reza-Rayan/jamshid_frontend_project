@@ -38,7 +38,7 @@ const GameCard = ({
         </div>
 
         <div className="overflow-hidden rounded-md">
-          <img src={`${image}`} alt="event banner" width={170} height={136} />
+          <img src={`${image}`} alt="event banner " className="w-full" />
         </div>
       </Box>
 
