@@ -38,7 +38,7 @@ const Preloader = ({ show }: any) => {
           alignItems: "center",
           gap: "20px",
           position: "absolute",
-          bottom: "20px",
+          bottom: "60px",
         }}
       >
         <Typography
