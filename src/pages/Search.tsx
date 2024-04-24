@@ -58,7 +58,7 @@ const Search = () => {
       <SearchBox searchHandle={searchHandle} />
       {/* Events */}
       <section className="mb-6 my-10 px-6 space-y-4">
-        <div className="flex items-center justify-between gap-1  title-container">
+        <div className="flex items-center gap-1  title-container">
           <Icon>
             <svg
               width="21"
