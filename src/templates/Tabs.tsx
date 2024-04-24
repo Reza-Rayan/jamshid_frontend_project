@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Tabs, Tab, useTheme } from "@mui/material";
+import { Box, Tabs, Tab, useTheme, Tooltip } from "@mui/material";
 
 interface TabsProps {
   title: string;
@@ -49,13 +49,21 @@ const CTabs = ({ title }: TabsProps) => {
               background: `linear-gradient(to bottom, ${theme.palette.primary.main}, ${theme.palette.primary.light})`,
               color: theme.palette.common.white,
             },
+            "&.Mui-disabled": {
+              color: "#A6A6CB",
+            },
           },
         }}
       >
         <Tab label="همه" />
         <Tab label="مافیا" />
-        <Tab label="دومینو" />
-        <Tab label="اسم فامیل" />
+        <Tooltip title="درحال حاضر غیرفعال است">
+          <Tab label="دومینو" disabled />
+        </Tooltip>
+
+        <Tooltip title="درحال حاضر غیرفعال است">
+          <Tab label="اسم فامیل" disabled />
+        </Tooltip>
       </Tabs>
     </Box>
   );
