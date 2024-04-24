@@ -6,9 +6,9 @@ interface TitleProps {
   description?: string;
   href?: string;
 }
-const Title = ({ title, description, href }: TitleProps) => {
+const   Title = ({ title, description, href }: TitleProps) => {
   return (
-    <div className="flex items-center gap-[1px]">
+    <div className="flex items-center gap-[1px] my-4">
       <div>
         <Typography variant="h2" fontSize={16} fontWeight={800}>
           {title}
