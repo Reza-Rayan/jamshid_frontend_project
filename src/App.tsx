@@ -1,9 +1,24 @@
+import { useEffect, useState } from "react";
+
+import Preloader from "./components/Preloader";
+
+// Custom
 import AllRoutes from "./routes";
 
 const App = () => {
+  const [showPreloader, setShowPreloader] = useState(true);
+  useEffect(() => {
+    // Hide the preloader after 3 seconds
+    const timeout = setTimeout(() => {
+      setShowPreloader(false);
+    }, 3000);
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <>
-      <AllRoutes />
+      <Preloader show={showPreloader} />
+      {!showPreloader && <AllRoutes />}
     </>
   );
 };
