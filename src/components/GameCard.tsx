@@ -19,7 +19,11 @@ const GameCard = ({
 }: GameCardProps) => {
   return (
     <Card
-      sx={{ backgroundColor: "#24245270", color: "#ffffff" }}
+      sx={{
+        backgroundColor: "#24245270",
+        color: "#ffffff",
+        borderRadius: "10px",
+      }}
       className="p-2"
     >
       <Box>
