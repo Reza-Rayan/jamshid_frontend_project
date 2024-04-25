@@ -54,14 +54,14 @@ const Home = () => {
       </Box>
       <CTabs title="بازی ها: " />
       {/* Use CCarousel to display GameCard components */}
-      <CCarousel slides={gameCards} />
+      <CCarousel perSlider={1.7} spaceBetween={10} slides={gameCards} />
       <Stack sx={{ margin: "32px auto" }}>
         <img src={AdBannerImg} alt="جم‌شید" className="rounded-[20px]" />
       </Stack>
       <Box className="my-8">
         {/* Use CCarousel to display BlogCard components */}
         <Title title="جدیدترین مقالات" href="#" />
-        <CCarousel slides={blogs} />
+        <CCarousel perSlider={1.7} spaceBetween={10} slides={blogs} />
       </Box>
     </Layout>
   );

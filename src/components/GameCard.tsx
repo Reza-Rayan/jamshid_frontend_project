@@ -2,7 +2,7 @@ import { Box, Card, Stack, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
 interface GameCardProps {
-  id?: number;
+  id?: string;
   title: string;
   location: string;
   conductor: string;
