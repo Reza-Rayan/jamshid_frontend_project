@@ -39,6 +39,9 @@ const Event: React.FC = () => {
     if (selectedGame) {
       setGame(selectedGame);
 
+      // Calculate countdown
+      const eventDate = new Date(selectedGame.date).getTime();
+
       const intervalId = setInterval(() => {
         const now = new Date().getTime();
         const distance = eventDate - now;
