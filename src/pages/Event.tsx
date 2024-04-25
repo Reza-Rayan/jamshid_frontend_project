@@ -1,9 +1,10 @@
-import { Box, Typography } from "@mui/material";
+import { Avatar, Box, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import TimeBox from "../components/TimeBox";
 import { mafia } from "../data/mafia.json";
 import EventLayout from "../layout/EventLayout";
+import CCarousel from "../templates/CCarousel";
 
 interface GameData {
   id: number;
@@ -68,6 +69,46 @@ const Event: React.FC = () => {
       };
     }
   }, [params]);
+
+  const users = [
+    {
+      id: 1,
+      username: "محمد امینی",
+      avatar: <Avatar />,
+    },
+    {
+      id: 2,
+      username: "محمد امینی",
+      avatar: <Avatar />,
+    },
+    {
+      id: 3,
+      username: "محمد امینی",
+      avatar: <Avatar />,
+    },
+    {
+      id: 4,
+      username: "محمد امینی",
+      avatar: <Avatar />,
+    },
+    {
+      id: 5,
+      username: "محمد امینی",
+      avatar: <Avatar />,
+    },
+  ];
+
+  const gameUsers = users.map((item) => ({
+    content: (
+      <div key={item.id} className="flex flex-col justify-center items-center gap-2">
+        {item.avatar}
+        <Typography fontSize={12} fontWeight={500} color={"#ffffff"}>
+          {" "}
+          {item.username}
+        </Typography>
+      </div>
+    ),
+  }));
 
   return (
     <EventLayout pageTitle="جزئیات ایونت">
@@ -227,13 +268,57 @@ const Event: React.FC = () => {
               {game.description}
             </Typography>
           </Box>
-          <Box sx={{ marginTop: "10px" }}>
-            <Typography color={"#ffffff"} fontSize={14} fontWeight={800}>
+          <Box sx={{ marginTop: "20px" }}>
+            <Typography
+              color={"#ffffff"}
+              variant="h2"
+              fontSize={14}
+              fontWeight={800}
+            >
               محل برگزاری
             </Typography>
             <Typography color={"#C8C8E1"} fontSize={12} marginTop={2}>
               {game.address}
             </Typography>
+            <Box
+              sx={{
+                paddingBottom: "20px",
+                borderBottom: "1px solid #4C4C7250",
+                marginTop: "10px",
+              }}
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249.71488427788034!2d51.40877829644872!3d35.71891256260421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e010beff0a169%3A0xecb885f314c8e3cc!2sName%20Cafe!5e0!3m2!1sen!2s!4v1714054193275!5m2!1sen!2s"
+                height="234"
+                width="100%"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                marginTop: "20px",
+                alignItems: "center",
+              }}
+            >
+              <Typography
+                variant="h2"
+                color={"#ffffff"}
+                fontSize={14}
+                fontWeight={800}
+              >
+                افردای که شرکت کرده اند{" "}
+              </Typography>
+              <Typography fontSize={12} color={"#A6A6CB"} fontWeight={800}>
+                ۶ نفر
+              </Typography>
+            </Box>
+            <Box sx={{ margin: "20px 0px" }}>
+              <CCarousel slides={gameUsers} perSlider={4} spaceBetween={50} />
+            </Box>
           </Box>
         </>
       )}
