@@ -1,16 +1,16 @@
-import { Box, Stack } from '@mui/material';
-import AdBannerImg from '../assets/banner-home.jpg';
-import BLogCard from '../components/BLogCard';
-import GameCard from '../components/GameCard';
-import SuperEvent from '../components/SuperEvent';
-import Title from '../components/Title';
-import Layout from '../layout/Layout';
-import CCarousel from '../templates/CCarousel';
-import CTabs from '../templates/Tabs';
+import { Box, Stack } from "@mui/material";
+import AdBannerImg from "../assets/banner-home.jpg";
+import BLogCard from "../components/BLogCard";
+import GameCard from "../components/GameCard";
+import SuperEvent from "../components/SuperEvent";
+import Title from "../components/Title";
+import Layout from "../layout/Layout";
+import CCarousel from "../templates/CCarousel";
+import CTabs from "../templates/Tabs";
 
 // Fake Data
-import { blog } from '../data/blog.json';
-import { mafia } from '../data/mafia.json';
+import { blog } from "../data/blog.json";
+import { mafia } from "../data/mafia.json";
 
 const Home = () => {
   // Map mafia data to create GameCard components
@@ -29,16 +29,16 @@ const Home = () => {
   }));
   // Map blog data to create BLogCard components
   const blogs = blog.map((item) => ({
-    content:(
+    content: (
       <BLogCard
-      key={item.id}
-      title={item.title}
-      author={item.author}
-      comments={item.comments}
-      date={item.date}
-      image={item.image}
-    />
-    )
+        key={item.id}
+        title={item.title}
+        author={item.author}
+        comments={item.comments}
+        date={item.date}
+        image={item.image}
+      />
+    ),
   }));
 
   return (
@@ -54,7 +54,7 @@ const Home = () => {
       <CTabs title="بازی ها: " />
       {/* Use CCarousel to display GameCard components */}
       <CCarousel slides={gameCards} />
-      <Stack sx={{ margin: '32px auto' }}>
+      <Stack sx={{ margin: "32px auto" }}>
         <img src={AdBannerImg} alt="جم‌شید" className="rounded-[20px]" />
       </Stack>
       <Box className="my-8">
