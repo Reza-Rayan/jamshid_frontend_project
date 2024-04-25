@@ -7,7 +7,7 @@ import EventLayout from "../layout/EventLayout";
 import CCarousel from "../templates/CCarousel";
 
 interface GameData {
-  id: number;
+  id: string;
   title: string;
   location: string;
   conductor: string;
@@ -38,11 +38,6 @@ const Event: React.FC = () => {
     const selectedGame = mafia.find((game) => game.id === id);
     if (selectedGame) {
       setGame(selectedGame);
-
-      // Calculate countdown
-      const eventDate = new Date(selectedGame.date).getTime();
-      const now = new Date().getTime();
-      const distance = eventDate - now;
 
       const intervalId = setInterval(() => {
         const now = new Date().getTime();
@@ -100,7 +95,10 @@ const Event: React.FC = () => {
 
   const gameUsers = users.map((item) => ({
     content: (
-      <div key={item.id} className="flex flex-col justify-center items-center gap-2">
+      <div
+        key={item.id}
+        className="flex flex-col justify-center items-center gap-2"
+      >
         {item.avatar}
         <Typography fontSize={12} fontWeight={500} color={"#ffffff"}>
           {" "}

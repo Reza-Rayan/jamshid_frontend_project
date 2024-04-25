@@ -94,7 +94,7 @@ const Search = () => {
           </Typography>
         </div>
         {gameCards.length > 0 ? (
-          <CCarousel slides={gameCards} />
+          <CCarousel slides={gameCards} perSlider={1.7} spaceBetween={10} />
         ) : (
           <Typography variant="body1" color={"#4C4C72"} textAlign={"center"}>
             ایونت مورد نظر یافت نشد!
@@ -139,7 +139,7 @@ const Search = () => {
           </Typography>
         </div>
         {blogs.length > 0 ? (
-          <CCarousel slides={blogs} />
+          <CCarousel perSlider={1.7} spaceBetween={10} slides={blogs} />
         ) : (
           <Typography variant="body1" color={"#4C4C72"} textAlign={"center"}>
             مقاله مورد نظر یافت نشد!
