@@ -33,7 +33,7 @@ const Event = ({ children, pageTitle }: EventProps) => {
           </span>
         </Box>
       </header>
-      <main>{children}</main>
+      <main className="py-3 px-4">{children}</main>
 
       <Box
         sx={{
@@ -54,8 +54,10 @@ const Event = ({ children, pageTitle }: EventProps) => {
             ۲۳.۰۰۰ تومان
           </Typography>
         </div>
-        <Button className="btn-style ">
-          <Typography color={"white"} fontSize={16}>شرکت در ایونت</Typography>
+        <Button className="btn-style">
+          <Typography color={"white"} fontSize={16} padding={"0px 20px"}>
+            شرکت در ایونت
+          </Typography>
         </Button>
       </Box>
     </>
