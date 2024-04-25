@@ -1,6 +1,7 @@
+import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { Link } from "react-router-dom";
-import { Typography } from "@mui/material";
+import Avatar from "@mui/material/Avatar";
 
 // Images
 import LogoImg from "../assets/logo.svg";
@@ -8,7 +9,6 @@ import LogoImg from "../assets/logo.svg";
 // Icons
 import { LuSearch } from "react-icons/lu";
 import { MdOutlineNotificationImportant } from "react-icons/md";
-import { FaUser } from "react-icons/fa";
 
 const Header = () => {
   return (
@@ -41,10 +41,7 @@ const Header = () => {
           <MdOutlineNotificationImportant fontSize={22} />
         </Link>
         <Link to="/profile">
-          <FaUser
-            fontSize={26}
-            className="bg-[#A62100] text-[#FFC27D] rounded-[5px] pt-1 w-[30px] h-[30px]"
-          />
+          <Avatar sx={{ borderRadius: "8px", padding:"0px",width:"40px",height:"40px" }} />
         </Link>
       </div>
     </header>
