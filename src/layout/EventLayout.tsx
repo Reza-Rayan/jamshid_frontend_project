@@ -33,7 +33,7 @@ const Event = ({ children, pageTitle }: EventProps) => {
           </span>
         </Box>
       </header>
-      <main className="py-3 px-4">{children}</main>
+      <main className="py-3 px-4 mb-28">{children}</main>
 
       <Box
         sx={{

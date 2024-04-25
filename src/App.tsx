@@ -11,7 +11,7 @@ const App = () => {
     // Hide the preloader after 3 seconds
     const timeout = setTimeout(() => {
       setShowPreloader(false);
-    }, 3000);
+    }, 1000);
     return () => clearTimeout(timeout);
   }, []);
 

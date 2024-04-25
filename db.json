@@ -1,0 +1,40 @@
+{
+    "mafia": [
+        {
+          "id": 1,
+          "title": "بازی مافیا (سناریو کشیش)",
+          "location": "کافه دون کلاب",
+          "conductor": "علیرضا رودی",
+          "date": "2024-05-01T12:00:00Z",
+          "image": "./public/images/mafia-banner.png",
+          "avatar": "./public/images/avatar.jpg"
+        },
+        {
+          "id": 2,
+          "title": "بازی حکم",
+          "location": "کافه دون کلاب",
+          "conductor": "علیرضا رودی",
+          "date": "2024-05-01T12:00:00Z",
+          "image": "./public/images/mafia-banner.png",
+          "avatar": "./public/images/avatar.jpg"
+        }
+      ],
+      "blog":[
+        {
+            "id":1,
+            "title":"بیشتر با سناریو کشیش آشنا شوید. سناریوو جذاب و پیچیده",
+            "date":"۱۲ بهمن ۱۴۰۲",
+            "author":"علیرضا رودی",
+            "comments":3,
+            "image":"./public/images/blog-image.jpg"
+        },
+        {
+            "id":2,
+            "title":"بیشتر با سناریو کشیش آشنا شوید. سناریوو جذاب و پیچیده",
+            "date":"۱۲ بهمن ۱۴۰۲",
+            "author":"علیرضا رودی",
+            "comments":3,
+            "image":"./public/images/blog-image.jpg"
+        }
+    ]
+}

@@ -24,6 +24,7 @@ const Home = () => {
         title={item.title}
         image={item.image}
         avatar={item.avatar}
+        id={item.id}
       />
     ),
   }));

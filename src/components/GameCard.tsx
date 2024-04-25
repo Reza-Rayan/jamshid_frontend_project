@@ -2,6 +2,7 @@ import { Box, Card, Stack, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
 interface GameCardProps {
+  id?: number;
   title: string;
   location: string;
   conductor: string;
@@ -17,6 +18,7 @@ const GameCard = ({
   date,
   image,
   avatar,
+  id,
 }: GameCardProps) => {
   return (
     <Card
@@ -27,7 +29,7 @@ const GameCard = ({
       }}
       className="p-2"
     >
-      <Link to={`event/${title}`}>
+      <Link to={`event/${id}`}>
         <Box>
           <div className="flex gap-1 p-2 mb-2 bg-[#ffffff07]">
             <img
