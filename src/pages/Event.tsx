@@ -318,7 +318,7 @@ const Event: React.FC = () => {
               </Typography>
             </Box>
             <Box sx={{ margin: "20px 0px" }}>
-              <CCarousel slides={gameUsers} perSlider={4} spaceBetween={50} />
+              <CCarousel slides={gameUsers} perSlider={4} spaceBetween={30} />
             </Box>
           </Box>
         </>
