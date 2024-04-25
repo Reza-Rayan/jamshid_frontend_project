@@ -1,7 +1,7 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
-import 'swiper/css';
+import "swiper/css";
 
 interface SlideItem {
   content: React.ReactNode;
@@ -9,14 +9,13 @@ interface SlideItem {
 
 interface CCarouselProps {
   slides: SlideItem[];
+  perSlider: number;
+  spaceBetween: number;
 }
 
-const CCarousel = ({ slides }: CCarouselProps) => {
+const CCarousel = ({ slides, perSlider, spaceBetween }: CCarouselProps) => {
   return (
-    <Swiper
-      spaceBetween={10}
-      slidesPerView={1.7}
-    >
+    <Swiper spaceBetween={spaceBetween} slidesPerView={perSlider}>
       {slides.map((slide, index) => (
         <SwiperSlide key={index}>{slide.content}</SwiperSlide>
       ))}
