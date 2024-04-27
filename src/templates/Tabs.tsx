@@ -57,13 +57,9 @@ const CTabs = ({ title }: TabsProps) => {
       >
         <Tab label="همه" />
         <Tab label="مافیا" />
-        <Tooltip title="درحال حاضر غیرفعال است">
-          <Tab label="دومینو" disabled />
-        </Tooltip>
+        <Tab label="دومینو" disabled />
 
-        <Tooltip title="درحال حاضر غیرفعال است">
-          <Tab label="اسم فامیل" disabled />
-        </Tooltip>
+        <Tab label="اسم فامیل" disabled />
       </Tabs>
     </Box>
   );

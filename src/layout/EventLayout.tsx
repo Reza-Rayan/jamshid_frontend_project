@@ -44,6 +44,7 @@ const Event = ({ children, pageTitle }: EventProps) => {
           display: "flex",
           justifyContent: "space-between",
           padding: "12px 20px",
+          zIndex:"50"
         }}
       >
         <div className="space-y-1">

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 interface GameCardProps {
   id?: string;
   title: string;
-  location: string;
+  address: string;
   conductor: string;
   date: string;
   image?: string;
@@ -13,7 +13,7 @@ interface GameCardProps {
 
 const GameCard = ({
   title,
-  location,
+  address,
   conductor,
   date,
   image,
@@ -103,7 +103,7 @@ const GameCard = ({
                 stroke="#A6A6CB"
               />
             </svg>
-            <Typography fontSize={10}>{location} </Typography>
+            <Typography fontSize={10}>{address} </Typography>
           </div>
           <div className="flex items-center gap-1 mt-2 text-[#A6A6CB]">
             <svg

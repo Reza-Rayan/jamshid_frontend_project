@@ -1,5 +1,11 @@
 import { Box, Stack } from "@mui/material";
+import { useEffect } from "react";
+import moment from "jalali-moment";
+
+// Image
 import AdBannerImg from "../assets/banner-home.jpg";
+
+// Custom Components
 import BLogCard from "../components/BLogCard";
 import GameCard from "../components/GameCard";
 import SuperEvent from "../components/SuperEvent";
@@ -8,26 +14,44 @@ import Layout from "../layout/Layout";
 import CCarousel from "../templates/CCarousel";
 import CTabs from "../templates/Tabs";
 
-// Fake Data
+//  Data
+import { FarsiMonth } from "../utils/FarsiMonth";
 import { blog } from "../data/blog.json";
-import { mafia } from "../data/mafia.json";
+
+// Redux
+import { useDispatch, useSelector } from "react-redux";
+import { getAllEvents, selectAllEvents } from "../redux/events/eventSlicer";
+import { AppDispatch } from "../redux/store";
 
 const Home = () => {
-  // Map mafia data to create GameCard components
-  const gameCards = mafia.map((item) => ({
-    content: (
-      <GameCard
-        key={item.id}
-        conductor={item.conductor}
-        date={item.date}
-        location={item.location}
-        title={item.title}
-        image={item.image}
-        avatar={item.avatar}
-        id={item.id}
-      />
-    ),
-  }));
+  const dispatch: AppDispatch = useDispatch();
+  const allEvent = useSelector(selectAllEvents);
+
+  useEffect(() => {
+    dispatch(getAllEvents());
+  }, [dispatch]);
+
+  // Map event data to create GameCard components
+  const gameCards = allEvent.map((item: any) => {
+    const jalaliDate = moment(item.date, "YYYY/MM/DD").locale("fa");
+    const jalaliMonthName = FarsiMonth[jalaliDate.jMonth()];
+    const formattedDate = `${jalaliDate.jDate()} ${jalaliMonthName} ${jalaliDate.jYear()}`;
+
+    return {
+      content: (
+        <GameCard
+          key={item.id}
+          id={item.id}
+          conductor={item.conductor}
+          date={formattedDate} // Display date with Farsi month name
+          address={item.address}
+          title={item.title}
+          image={item.image}
+          avatar={item.avatar}
+        />
+      ),
+    };
+  });
   // Map blog data to create BLogCard components
   const blogs = blog.map((item) => ({
     content: (
