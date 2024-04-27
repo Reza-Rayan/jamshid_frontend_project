@@ -1,8 +1,9 @@
 import { createSlice, createAsyncThunk, PayloadAction, createSelector } from "@reduxjs/toolkit";
 import axios from 'axios';
 import BaseURL from "../../utils/BaseURL";
+import AxiosAgent from "../../services/axiosAgent";
 
-// Define the type for your event object
+// Define the type for  event object
 interface Event {
     id: number;
     title: string;
@@ -38,8 +39,7 @@ export const getAllEvents = createAsyncThunk(
     "events/all",
     async () => {
         try {
-            const response = await axios.get<Event[]>(`${BaseURL}/events`);
-            console.log('Check Response Thunk');
+            const response = await AxiosAgent.get<Event[]>(`${BaseURL}/events`);
             return response.data;
         } catch (error) {
             console.log("API Get All", error);
