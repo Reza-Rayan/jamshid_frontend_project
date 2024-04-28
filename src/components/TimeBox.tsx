@@ -1,11 +1,11 @@
 import { Box, Typography } from "@mui/material";
 
 interface TimeBoxProps {
-  value: number;
+  value?: string | number;
   label: string;
 }
 
-const TimeBox: React.FC<TimeBoxProps> = ({ value, label }) => (
+const TimeBox = ({ value, label }:TimeBoxProps) => (
   <>
     <Box
       sx={{

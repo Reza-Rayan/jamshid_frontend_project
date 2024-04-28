@@ -9,9 +9,10 @@ import { TfiMore } from "react-icons/tfi";
 interface EventProps {
   children: React.ReactNode;
   pageTitle: string;
+  price:number;
 }
 
-const Event = ({ children, pageTitle }: EventProps) => {
+const Event = ({ children, pageTitle,price }: EventProps) => {
   return (
     <>
       <header className=" py-3 px-4">
@@ -52,7 +53,7 @@ const Event = ({ children, pageTitle }: EventProps) => {
             هزینه ورودی
           </Typography>
           <Typography fontSize={18} fontWeight={700} color={"#ffffff"}>
-            ۲۳.۰۰۰ تومان
+            <span>{price.toLocaleString()}</span> تومان
           </Typography>
         </div>
         <Button className="btn-style">
