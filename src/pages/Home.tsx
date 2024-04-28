@@ -1,5 +1,4 @@
 import { Box, Stack } from "@mui/material";
-import { useEffect } from "react";
 import moment from "jalali-moment";
 
 // Image
@@ -8,6 +7,7 @@ import AdBannerImg from "../assets/banner-home.jpg";
 // Custom Components
 import BLogCard from "../components/BLogCard";
 import GameCard from "../components/GameCard";
+import Preloader from "../components/Preloader";
 import SuperEvent from "../components/SuperEvent";
 import Title from "../components/Title";
 import Layout from "../layout/Layout";
@@ -15,24 +15,24 @@ import CCarousel from "../templates/CCarousel";
 import CTabs from "../templates/Tabs";
 
 //  Data
-import { FarsiMonth } from "../utils/FarsiMonth";
 import { blog } from "../data/blog.json";
+import { FarsiMonth } from "../utils/FarsiMonth";
 
-// Redux
-import { useDispatch, useSelector } from "react-redux";
-import { getAllEvents, selectAllEvents } from "../redux/events/eventSlicer";
-import { AppDispatch } from "../redux/store";
+// Import Slicer
+import { useGetAllEventsQuery } from "../redux/events/EventsSlicer";
 
 const Home = () => {
-  const dispatch: AppDispatch = useDispatch();
-  const allEvent = useSelector(selectAllEvents);
+  const { data, isLoading } = useGetAllEventsQuery({});
 
-  useEffect(() => {
-    dispatch(getAllEvents());
-  }, [dispatch]);
+  if (isLoading) return <Preloader />;
+
+  if (!data) return null;
+
+  // Ensure data is an array
+  const eventData = Array.isArray(data) ? data : [];
 
   // Map event data to create GameCard components
-  const gameCards = allEvent.map((item: any) => {
+  const gameCards = eventData.map((item) => {
     const jalaliDate = moment(item.date, "YYYY/MM/DD").locale("fa");
     const jalaliMonthName = FarsiMonth[jalaliDate.jMonth()];
     const formattedDate = `${jalaliDate.jDate()} ${jalaliMonthName} ${jalaliDate.jYear()}`;
@@ -52,8 +52,10 @@ const Home = () => {
       ),
     };
   });
+
+
   // Map blog data to create BLogCard components
-  const blogs = blog.map((item) => ({
+  const blogCards = blog.map((item) => ({
     content: (
       <BLogCard
         key={item.id}
@@ -85,7 +87,7 @@ const Home = () => {
       <Box className="my-8">
         {/* Use CCarousel to display BlogCard components */}
         <Title title="جدیدترین مقالات" href="#" />
-        <CCarousel perSlider={1.7} spaceBetween={10} slides={blogs} />
+        <CCarousel perSlider={1.7} spaceBetween={10} slides={blogCards} />
       </Box>
     </Layout>
   );
