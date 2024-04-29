@@ -9,30 +9,34 @@ import CCarousel from "../templates/CCarousel";
 import { blog } from "../data/blog.json";
 import { mafia } from "../data/mafia.json";
 
+import {useGetAllEventsQuery} from "../redux/events/EventsSlicer";
+
 const Search = () => {
   const [search, setSearch] = useState<string>("");
+
+  const {data} = useGetAllEventsQuery({})
   // Search Handle Function By Writing
   const searchHandle = (event: any) => {
     setSearch(event.target.value);
   };
 
-  const filterData = (data: any) => {
-    return data.filter((item: any) =>
+  const filterData = (datas: any) => {
+    return datas?.filter((item: any) =>
       item.title.toLowerCase().includes(search.toLowerCase())
     );
   };
 
-  const filteredGames = filterData(mafia);
+  const filteredGames = filterData(data);
   const filteredBlogs = filterData(blog);
 
   // Map mafia data to create GameCard components
-  const gameCards = filteredGames.map((item: any) => ({
+  const gameCards = filteredGames?.map((item: any) => ({
     content: (
       <GameCard
         key={item.id}
         conductor={item.conductor}
         date={item.date}
-        address={item.location}
+        address={item.address}
         title={item.title}
         image={item.image}
         avatar={item.avatar}
@@ -93,7 +97,7 @@ const Search = () => {
             ایونت ها
           </Typography>
         </div>
-        {gameCards.length > 0 ? (
+        {gameCards?.length > 0 ? (
           <CCarousel slides={gameCards} perSlider={1.7} spaceBetween={10} />
         ) : (
           <Typography variant="body1" color={"#4C4C72"} textAlign={"center"}>
