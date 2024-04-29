@@ -2,7 +2,6 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
-import "../styles/Ccarousel.css";
 
 interface SlideItem {
   content: React.ReactNode;

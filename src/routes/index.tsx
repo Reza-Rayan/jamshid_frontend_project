@@ -7,6 +7,8 @@ import Search from "../pages/Search";
 import Explore from "../pages/Explore";
 import Articles from "../pages/Articles";
 import Event from "../pages/Event";
+import Shop from "../pages/Shop";
+import Profile from "../pages/Profile";
 
 const AllRoutes = () => {
   return (
@@ -17,6 +19,8 @@ const AllRoutes = () => {
         <Route path="/explore" element={<Explore />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/event/:id" element={<Event />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/auth" element={<AuthPage />} />
       </Routes>
     </>
