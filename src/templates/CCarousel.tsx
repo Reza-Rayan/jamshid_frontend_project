@@ -17,7 +17,9 @@ const CCarousel = ({ slides, perSlider, spaceBetween }: CCarouselProps) => {
   return (
     <Swiper spaceBetween={spaceBetween} slidesPerView={perSlider}>
       {slides.map((slide, index) => (
-        <SwiperSlide key={index}>{slide.content}</SwiperSlide>
+        <SwiperSlide className="min-h-[100px] max-h-[200px]" key={index}>
+          {slide.content}
+        </SwiperSlide>
       ))}
     </Swiper>
   );
