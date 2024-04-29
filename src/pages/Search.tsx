@@ -7,9 +7,8 @@ import SearchBox from "../components/SearchBox";
 import CCarousel from "../templates/CCarousel";
 // Fake Data
 import { blog } from "../data/blog.json";
-import { mafia } from "../data/mafia.json";
 
-import {useGetAllEventsQuery} from "../redux/events/EventsSlicer";
+import { useGetAllEventsQuery } from "../redux/events/EventsSlicer";
 
 const Search = () => {
   const [search, setSearch] = useState<string>("");
