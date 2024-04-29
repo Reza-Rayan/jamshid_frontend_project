@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Typography,SwipeableDrawer } from "@mui/material";
 import { Link } from "react-router-dom";
 
 // Icons
@@ -12,7 +12,31 @@ interface EventProps {
   price:number;
 }
 
+type Anchor = 'top' | 'left' | 'bottom' | 'right';
+
 const Event = ({ children, pageTitle,price }: EventProps) => {
+  // Handle Drawer
+  const [state, setState] = React.useState({
+    top: false,
+    left: false,
+    bottom: false,
+    right: false,
+  });
+
+  const toggleDrawer =
+    (anchor: Anchor, open: boolean) =>
+    (event: React.KeyboardEvent | React.MouseEvent) => {
+      if (
+        event &&
+        event.type === 'keydown' &&
+        ((event as React.KeyboardEvent).key === 'Tab' ||
+          (event as React.KeyboardEvent).key === 'Shift')
+      ) {
+        return;
+      }
+
+      setState({ ...state, [anchor]: open });
+    };
   return (
     <>
       <header className=" py-3 px-4">
@@ -56,12 +80,63 @@ const Event = ({ children, pageTitle,price }: EventProps) => {
             <span>{price.toLocaleString()}</span> تومان
           </Typography>
         </div>
-        <Button className="btn-style">
+        <Button className="btn-style"
+        onClick={toggleDrawer("bottom",true)}>
           <Typography color={"white"} fontSize={16} padding={"0px 20px"}>
             شرکت در ایونت
           </Typography>
         </Button>
       </Box>
+
+
+      {/* Payment Drawer Section */}
+      <SwipeableDrawer
+      anchor={"bottom"}
+      open={state["bottom"]}
+      onClose={toggleDrawer("bottom", false)}
+      onOpen={toggleDrawer("bottom", true)}
+
+    >
+      <Box
+       sx={{
+        backgroundColor:"#242452",
+        padding:"20px",
+        color:"#ffffff",
+        display:"flex",
+        flexDirection:"column",
+        gap:"10px"
+      }}
+      >
+      <Typography
+      textAlign={"center"}
+       fontSize={18}
+       fontWeight={800}
+       variant="h3"
+       >
+        پرداخت هزینه ورودی
+      </Typography>
+      <Typography
+      textAlign={"center"}
+       fontSize={12}
+       fontWeight={300}
+       variant="body1"
+       color={"#A6A6CB"}
+       >
+        هزینه ورودی به ایونت را میتوانید از طریق یکی از درگاه های پرداخت پایین انجام دهید
+      </Typography>
+
+      <Typography
+      textAlign={"left"}
+       fontSize={16}
+       fontWeight={800}
+       variant="h3"
+       marginTop={"10px"}
+       >
+       پرداخت از طریق
+      </Typography>
+      </Box>
+    </SwipeableDrawer>
+      {/* Payment Drawer Section */}
     </>
   );
 };
