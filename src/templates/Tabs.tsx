@@ -1,5 +1,5 @@
+import { Box, Tab, Tabs, useTheme } from "@mui/material";
 import React from "react";
-import { Box, Tabs, Tab, useTheme, Tooltip } from "@mui/material";
 
 interface TabsProps {
   title: string;

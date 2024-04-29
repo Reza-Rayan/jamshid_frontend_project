@@ -31,7 +31,7 @@ const Explore = () => {
             conductor={item.conductor}
             title={item.title}
             date={item.date}
-            location={item.location}
+            address={item.location}
             avatar={item.avatar}
             image={item.image}
           />

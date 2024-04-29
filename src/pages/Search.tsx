@@ -32,7 +32,7 @@ const Search = () => {
         key={item.id}
         conductor={item.conductor}
         date={item.date}
-        location={item.location}
+        address={item.location}
         title={item.title}
         image={item.image}
         avatar={item.avatar}
