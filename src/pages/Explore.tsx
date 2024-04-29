@@ -6,9 +6,11 @@ import SuperEvent from "../components/SuperEvent";
 import GameCard from "../components/GameCard";
 
 // Game Data
-import { mafia } from "../data/mafia.json";
+import { useGetAllEventsQuery } from "../redux/events/EventsSlicer";
 
 const Explore = () => {
+const {data} = useGetAllEventsQuery({})
+
   return (
     <Layout>
       <div className="flex items-center  gap-1  title-container mb-6">
@@ -25,13 +27,13 @@ const Explore = () => {
       <SuperEvent />
       {/* All Game Cards */}
       <section className="grid grid-cols-2 gap-2 my-4">
-        {mafia.map((item: any) => (
+        {data?.map((item: any) => (
           <GameCard
             key={item.id}
             conductor={item.conductor}
             title={item.title}
             date={item.date}
-            address={item.location}
+            address={item.address}
             avatar={item.avatar}
             image={item.image}
           />
