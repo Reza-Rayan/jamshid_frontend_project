@@ -31,7 +31,7 @@ const GameCard = ({
     >
       <Link to={`event/${id}`}>
         <Box>
-          <div className="flex gap-1 p-2 mb-2 bg-[#ffffff07]">
+          <div className="flex gap-1 p-2 mb-2 bg-[#ffffff07] max-h-full">
             <img
               src={avatar}
               alt="گرداننده"

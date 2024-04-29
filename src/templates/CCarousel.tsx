@@ -2,6 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
+import "../styles/Ccarousel.css";
 
 interface SlideItem {
   content: React.ReactNode;
@@ -15,11 +16,13 @@ interface CCarouselProps {
 
 const CCarousel = ({ slides, perSlider, spaceBetween }: CCarouselProps) => {
   return (
-    <Swiper spaceBetween={spaceBetween} slidesPerView={perSlider}>
+    <Swiper
+      spaceBetween={spaceBetween}
+      className="mb-0"
+      slidesPerView={perSlider}
+    >
       {slides.map((slide, index) => (
-        <SwiperSlide className="min-h-[100px] max-h-[200px]" key={index}>
-          {slide.content}
-        </SwiperSlide>
+        <SwiperSlide key={index}>{slide.content}</SwiperSlide>
       ))}
     </Swiper>
   );
